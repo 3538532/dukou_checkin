@@ -42,8 +42,8 @@ void main(List<String> arguments) async {
     var checkinResult = await checkin(token);
     var message = checkinResult.result;
     if (checkinResult.ret == 1) {
-      TransformResult transformResult = await trafficTransform(1024, token);
-      message += '\n${transformResult.msg}';
+//不转换流量      TransformResult transformResult = await trafficTransform(1024, token);
+//不转换流量      message += '\n${transformResult.msg}';
     }
     if (serverKey != null && serverKey.isNotEmpty) {
       await sendCheckinMessage(serverKey, message);
